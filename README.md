@@ -5,4 +5,7 @@
 mail：2663479778@qq.com
 
 # Contributor List
-(把每组所有成员的名字与学号写在下面)
+xumengqi1-徐梦旗-201732120124
+Hollyluc-王海榕-201732120105
+klitile-王雪洁-201732120106
+jerilmm-蒋佳玲-201732120103
