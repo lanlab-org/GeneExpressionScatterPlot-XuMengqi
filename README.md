@@ -17,7 +17,7 @@
 该软件会输出一个散点图，以及在各个生物条件下的基因表达水平相关性以及p值。
 
 
-# 需求分析文档
+## 需求分析文档
 
 
 - 2019年4月课堂讨论: http://lanlab.org/course/2019s/se/category-specific-scatterplot.txt
@@ -35,13 +35,17 @@
 - 吴贞娴文档: 链接呢？
 
 
-# 原始作者
+## 原始作者
 
 徐梦旗 学号：201732120124
 
 Email：2663479778@qq.com
 
-# How to Contribute
+
+
+
+
+## How to Contribute
 
 We welcome your participation in this project.
 
@@ -57,7 +61,7 @@ You will use the feature-branching workflow (see below) when interacting with th
 
 I believe that code review at the Pull Request stage is important for both improving code quality and improving team quality.
 
-## The Feature-branching Workflow
+### The Feature-branching Workflow
 
 We will use the feature-branching workflow for collaboration. The idea is that you make your own branch, work on it, and push this branch to the central repo for review.
 
@@ -66,7 +70,9 @@ Check the section The feature-branching workflow in the following link for more 
 https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 
 
-# Contributor List
+
+
+## Contributor List
 
 xumengqi1-徐梦旗-201732120124
 
