@@ -763,7 +763,7 @@ function makeNumberToStringAndExponential(temp) {
             break;
         }
     }
-    str = strTemp.substring(0, indexOfE) + "&times;10<sup>" + strTemp.substring(indexOfE + 1) + "</sup>";
+    str = strTemp.substring(0, indexOfE) + "x10<sup>" + strTemp.substring(indexOfE + 1) + "</sup>";
     return str;
 }
 function isGene1OrGene2Json(str) {
