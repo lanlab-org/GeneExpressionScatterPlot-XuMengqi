@@ -1,4 +1,4 @@
-#Gene Expression Scatter Plot Analysis Tool
+# Gene Expression Scatter Plot Analysis Tool
 
 这是一款基因表达散点图可视化软件，用于分析两个基因是否在表达水平上具有
 相关性。
@@ -17,7 +17,7 @@
 该软件会输出一个散点图，以及在各个生物条件下的基因表达水平相关性以及p值。
 
 
-#需求分析文档
+# 需求分析文档
 
 
 - 2019年4月课堂讨论: http://lanlab.org/course/2019s/se/category-specific-scatterplot.txt
@@ -35,14 +35,14 @@
 - 吴贞娴文档: 链接呢？
 
 
-#原始作者
+# 原始作者
 
 徐梦旗 学号：201732120124
 
 Email：2663479778@qq.com
 
 
-##Contributor List
+# Contributor List
 
 xumengqi1-徐梦旗-201732120124
 
