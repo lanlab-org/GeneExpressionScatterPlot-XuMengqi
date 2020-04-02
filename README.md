@@ -32,7 +32,8 @@
 
 - 袁世家文档: https://srs-writing.readthedocs.io/en/latest/
 
-- 吴贞娴文档: 链接呢？
+- 吴贞娴文档: https://system1.readthedocs.io/zh_CN/latest/
+
 
 
 ## 原始作者
