@@ -690,7 +690,7 @@ function errorCode(temp) {
                 '105': 'invalid json format in gene2 file',
                 '106': 'invalid json format in information file',
                 '107': 'sample already exists, no need to add it again',
-                '108': 'invalid gene1, gene2 content, maybe you upload the files by an error ordering'
+                '108': 'wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.'
                }
     alert("Error " + temp + ": " + code[temp]);
 }
