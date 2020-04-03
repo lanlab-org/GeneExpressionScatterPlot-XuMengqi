@@ -690,7 +690,7 @@ function errorCode(temp) {
                 '105': 'invalid json format in gene2 file',
                 '106': 'invalid json format in information file',
                 '107': 'sample already exists, no need to add it again',
-                '108': 'invalid gene1, gene2, or information uploading order, please upload again by right order'
+                '108': 'wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.'
                }
     alert("Error " + temp + ": " + code[temp]);
 }
@@ -766,18 +766,39 @@ function makeNumberToStringAndExponential(temp) {
     str = strTemp.substring(0, indexOfE) + "x10<sup>" + strTemp.substring(indexOfE + 1) + "</sup>";
     return str;
 }
+/**
+ * @param {Object} str 合法JSON格式的字符串
+ * @return {bool} 是否为合法的Gene1和Gene2内容
+ */
 function isGene1OrGene2Json(str) {
-    var n = 0;
-    for (var i = 0; i < str.length; i++) {
-        if (str.charAt(i) == '{') {
-            n++;
+	//valid json
+	//{string : number, string : number} ok
+	//{string : {string : number}} not ok
+	//{string : number, string : [number1, number2]} not ok
+	//[number, number, number] not ok
+	//number not ok
+	//合法条件为：以 { 开头，以 } 结束；只有一个 {，只有一个 }；不存在 [ 或 ]；
+	var string = str.trim();
+	var isStartOk = (string.charAt(0) == '{');
+	var isEndOk = (string.charAt(string.length - 1) == '}');
+	var isJustOneLeft = true;
+	var isJustOneRight = true;
+	var isJustLeftAndRight = true;
+    for (var i = 1; i < str.length - 1; i++) {
+		var aChar = string.charAt(i);
+        if (aChar == '{') {
+            isJustOneLeft = false;
+			break;
         }
-        if (n > 2) {
-            break;
-        }
+		if (aChar == '}') {
+			isJustOneRight = false;
+			break;
+		}
+		if (aChar == '[' || aChar == ']') {
+			isJustLeftAndRight = false;
+			break;
+		}
     }
-    if (n == 1) {
-        return true;
-    }
-    return false;
+	//判断顺序不能改变，用了短路
+    return isStartOk && isEndOk && isJustOneLeft && isJustOneRight && isJustLeftAndRight;
 }
