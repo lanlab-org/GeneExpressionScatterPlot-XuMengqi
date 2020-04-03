@@ -1,0 +1,123 @@
+@T001a
+
+Test title: 错误Gene1和Gene2文件内容测试
+
+Test for: RQ01
+
+Description: None.
+
+Rationale: None.
+
+Input: { "R0SRR1738120XX":{"value":1.71018781553424}, "R0SRR1738121XX":{"value":1.81645208181843} } 
+
+Expected output: Error 108: wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.
+
+Actual output: As expected.
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王雪洁
+
+Date:  2020-04-03
+
+
+@T001b
+
+Test title: 错误Gene1和Gene2文件内容测试
+
+Test for: RQ01
+
+Description: None.
+
+Rationale: None.
+
+Input: {"R0SRR1738120XX": 1.71018781553424,"R0SRR1738121XX": [1.81645208181843, 1.81645208181843, 1.81645208181843]}
+
+Expected output: Error 108: wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.
+
+Actual output: As expected.
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王雪洁
+
+Date:  2020-04-03
+
+
+@T001c
+
+Test title: 错误Gene1和Gene2文件内容测试
+
+Test for: RQ01
+
+Description: None.
+
+Rationale: None.
+
+Input: [1.81645208181843, 1.81645208181843, "1.81645208181843",{"R0SRR1738121XX": 1.81645208181843}]
+
+Expected output: Error 108: wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.
+
+Actual output: As expected.
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王雪洁
+
+Date:  2020-04-03
+
+
+@T001d
+
+Test title: 错误Gene1和Gene2文件内容测试
+
+Test for: RQ01
+
+Description: None.
+
+Rationale: None.
+
+Input: { "R0SRR1738120XX":[1.71018781553424], "R0SRR1738121XX":{"value":1.81645208181843} } 
+
+Expected output: Error 108: wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.
+
+Actual output: As expected.
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王雪洁
+
+Date:  2020-04-03
+
+
+@T001e
+
+Test title: 正确Gene1和Gene2文件内容测试
+
+Test for: RQ01
+
+Description: None
+
+Rationale: None
+
+Input: 合法的Gene1或Gene2文件
+
+Expected output: 生成结果散点图及相关数据
+
+Actual output: As expected.
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王雪洁
+
+Date: 2020-04-03
