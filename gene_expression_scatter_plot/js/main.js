@@ -15,6 +15,9 @@ var attrMatchs = new Array();
 var tissueMatchs = new Array();
 var detailMatchs = new Array();
 var dic = new Array();  //定义一个字典
+var G1 = ""; 	//g1.json的JSON形式
+var G2 = "";	//g2.json的JSON形式
+var INFO= "";	//info.json的JSON形式
 var lastLineCorrelationCoefficient = "";
 var numForChangingTheOrderByTissue = 0;
 var numForChangingTheOrderByCoefficient = 0;
@@ -93,8 +96,8 @@ function getJsons(){
 //定义一个字典
 function condition_specific_correlation(g1, g2, info){
 	var a = makeStringIntoJson(g1, g2, info);
-	if(a.length==4){
-		var numberOfExecuted = makeJsonIntoArray(a[0], a[1], a[2], a[3]);
+	if(a){
+		var numberOfExecuted = makeJsonIntoArray(G1, G2, INFO, a);
  		lastLineCorrelationCoefficient = getCorrelationCoefficientAndSetGroups();
  		if (numberOfExecuted != 0) {
  			// 以第二排的相关系数进行排序
@@ -121,10 +124,10 @@ function makeStringIntoJson(strGene1, strGene2, strInformation) {
         var isJsonGene2 = isJson(strGene2);
         var isJsonInformation = isJson(strInformation);
         if (isJsonGene1 && isJsonGene2) {
-            var jsonGene1 = eval('(' + strGene1 + ')');
-            var jsonGene2 = eval('(' + strGene2 + ')');
+            G1 = eval('(' + strGene1 + ')');
+            G2 = eval('(' + strGene2 + ')');
             if (isJsonInformation) {
-                var jsonInformation = eval('(' + strInformation + ')');
+                INFO = eval('(' + strInformation + ')');
             }
             else {
                 errorCode(106);
@@ -136,8 +139,7 @@ function makeStringIntoJson(strGene1, strGene2, strInformation) {
                 errorCode(108);
             }
             else {
-		// 将结果以数组形式返回
-		return new Array(jsonGene1, jsonGene2, jsonInformation, isJsonInformation);
+		return isJsonInformation;
             }
         }
         else {
