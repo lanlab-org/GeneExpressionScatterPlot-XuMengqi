@@ -5,24 +5,23 @@
  *          id_main_settings
  *          id_main_end
  */
-var tissues = [];
-var datas = new Array();
+var tissues = [];	// 所有有效点的tissue分类
+var datas = new Array(); // 存储每个tissue下的坐标
 datas[0] = new Array();
-var details = new Array();
+var details = new Array();	//存储每个tissue的detail
 details[0] = new Array();
-var groups = new Array();
-var attrMatchs = new Array();
-var tissueMatchs = new Array();
-var detailMatchs = new Array();
-var dic = new Array();  //定义一个字典
+var groups = new Array();	//存储每个datas的tissue，相关系数，个数，pvalue信息
+var attrMatchs = new Array(); 	//用来匹配各JSON的键名
+var tissueMatchs = new Array();	//用来匹配INFO.JSON里的键名，有tissue和category两种
+var detailMatchs = new Array();	//用来匹配INFO.JSON里的键名detail
 var G1 = ""; 	//g1.json的JSON形式
 var G2 = "";	//g2.json的JSON形式
-var INFO= "";	//info.json的JSON形式
-var lastLineCorrelationCoefficient = "";
-var numForChangingTheOrderByTissue = 0;
-var numForChangingTheOrderByCoefficient = 0;
-var numForChangingTheOrderByNumber = 0;
-var numForChangingTheOrderByP = 0;
+var INFO = "";	//info.json的JSON形式
+var lastLineCorrelationCoefficient = "";	//数据表格最后一行统计计算所有数据
+var numForChangingTheOrderByTissue = 0;	//记录tissue列改变排序的次数
+var numForChangingTheOrderByCoefficient = 0;	//记录Coefficient列改变排序的次数
+var numForChangingTheOrderByNumber = 0;	//记录Number列改变排序的次数
+var numForChangingTheOrderByP = 0;	//记录pvalue列改变排序的次数
 var executeAdjustOfBasicModel = "";
 var strTissueSettings = "Tissue";
 function startRun() {
@@ -90,14 +89,18 @@ function getJsons(){
 	var strGene1 = document.getElementById("id_main_input_preview_gene1").innerHTML;
     var strGene2 = document.getElementById("id_main_input_preview_gene2").innerHTML;
     var strInformation = document.getElementById("id_main_input_preview_information").innerHTML;
-	div = condition_specific_correlation(strGene1, strGene2, strInformation);
-	console.log(div);
+	//定义函数，返回值是字典
+	condition_specific_correlation(strGene1, strGene2, strInformation);
 }
-//定义一个字典
+//定义condition_specific_correlation,返回值是字典
 function condition_specific_correlation(g1, g2, info){
-	var a = makeStringIntoJson(g1, g2, info);
+	//将id_main_input_preview中的内容转换为Json，返回值a是为了判断info文件是否为空
+	var a = convertStringToJson(g1, g2, info);
+	//info文件不是空的
 	if(a){
+		//使用json文件内容计算并赋值给tissues, datas, details,gene1,gene2等全局变量，返回值为可绘制种类的数量
 		var numberOfExecuted = makeJsonIntoArray(G1, G2, INFO, a);
+		//表格排序
  		lastLineCorrelationCoefficient = getCorrelationCoefficientAndSetGroups();
  		if (numberOfExecuted != 0) {
  			// 以第二排的相关系数进行排序
@@ -107,6 +110,7 @@ function condition_specific_correlation(g1, g2, info){
 	//定义字典d
 	var d = new Array();
 	for(var i = 0; i < groups.length - 1; i++){
+		//每一种类的字典内容
 		var value = new Array();
 		value["r"] = groups[i][1].toFixed(5) + groups[i][4];
 		value["n"] = groups[i][2];			
@@ -118,7 +122,7 @@ function condition_specific_correlation(g1, g2, info){
 /**
  * 将id_main_input_preview中的内容转换为Json
  */
-function makeStringIntoJson(strGene1, strGene2, strInformation) {
+function convertStringToJson(strGene1, strGene2, strInformation) {
     if(strGene1 != "" && strGene2 != "") {
         var isJsonGene1 = isJson(strGene1);
         var isJsonGene2 = isJson(strGene2);
@@ -166,6 +170,7 @@ function makeStringIntoJson(strGene1, strGene2, strInformation) {
         }
     }
 }
+//使用json文件内容计算并赋值给tissues, datas, details,gene1,gene2等全局变量
 function makeJsonIntoArray(jsonGene1, jsonGene2, jsonInformation, isJsonInformation) {
     var numberOfExecuted = 0;
     var numberOfExecutedInfor = 0;
