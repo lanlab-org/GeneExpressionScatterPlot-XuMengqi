@@ -26,6 +26,20 @@
 该软件会输出一个散点图，以及在各个生物条件下的基因表达水平相关性以及p值。
 
 
+
+## 将TAB-delimited格式的文件或者CSV格式的文件转化为JSON格式的输入
+
+使用tab2json或者csv2json将你的文件迅速转为Gene Expression Scatter Plot可以接收的格式。
+
+- tab2json.py gene1.tsv > gene1.json
+
+- csv2json.py gene1.csv > gene1.json
+
+
+(tab2json，csv2json待开发)
+
+
+
 ## 需求分析文档
 
 
