@@ -39,6 +39,20 @@
 (tab2json，csv2json待开发)
 
 
+## Current Status 
+
+目前，我们有3个协作组共12人在改进这个基因表达相关性分析工具。
+
+除了GitHub上的更新之外，各个小组还用看板来安排具体事务，每个成员每次集中精力把一个事务做好。
+
+- [吴贞娴、张珣、常思琦、王智洋小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=d7ca96ebee523c133af98df7ba11237738b380a7b31a709e0a4434f041fc)
+
+- [刘莉莉、唐叶尔、何可人、陈俊蕾小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=7fa477cafd4387e57173ab1ad68b540b087cf2aec73be6debf6c5bad371b)
+
+- [徐梦旗、王海榕、蒋佳玲、王雪洁小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=39f14efdf98ba7b19a35993a54d68a67c655e7e7a7a09dcec19c946645db)
+
+
+
 
 ## 需求分析文档
 
