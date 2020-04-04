@@ -163,6 +163,12 @@ Check the section The feature-branching workflow in the following link for more 
 https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 
 
+## Discussion Forum
+
+We use IRC for asynchronous communication.  Our IRC channel is at #scatterplot@irc.freenode.org.
+
+
+
 ## Project Checklist
 
 - [ ] Mission statement
@@ -170,8 +176,6 @@ https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 - [ ] FAQ  (should be grown gradually, not suddenly)
 
 - [ ] COPYING/LICENSE
-
-- [ ] Discussion Forum
 
 - [ ] Developer Documentation
 
