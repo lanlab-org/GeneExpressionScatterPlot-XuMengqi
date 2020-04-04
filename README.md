@@ -42,6 +42,11 @@
 (tab2json，csv2json待开发)
 
 
+## 安装说明
+
+本软件无需安装。下载这个项目到你的本地，点击gene_expression_scatter_plot/gene_scatter_plot_home.html即可开始使用。
+
+
 ## Current Status 
 
 目前，我们有3个协作组共12人在改进这个基因表达相关性分析工具。
@@ -120,7 +125,22 @@ https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 
 ## Project Checklist
 
-TBA.
+- [ ] Mission statement
+
+- [ ] Requirement Traceability Matrix
+
+- [ ] FAQ  (should be grown gradually, not suddenly)
+
+- [ ] COPYING/LICENSE
+
+- [ ] Discussion Forum
+
+- [ ] Developer Documentation
+
+- [ ] User Documentation
+
+- [ ] Code well commented (1 comment per 3-9 SLOC)
+
 
 
 ## Contributor List
