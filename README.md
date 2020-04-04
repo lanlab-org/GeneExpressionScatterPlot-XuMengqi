@@ -96,7 +96,14 @@
 
 ## Requirement Traceability Matrix
 
-每个需求至少伴有一个测试。 我们用[RMT.py](https://github.com/spm2020spring/RequirementTraceabilityMatrix)产生Requirement Traceability Matrix。
+每个需求至少伴有一个测试。 我们用[RMT.py](https://github.com/spm2020spring/RequirementTraceabilityMatrix)这个Python小程序来产生Requirement Traceability Matrix。
+
+每个协作组至少要有一个成员专门负责产生这个需求追踪矩阵。
+
+该成员需要编辑 [srs.txt](https://github.com/lanlab-org/GeneExpressionScatterPlot-XuMengqi/blob/IMPROVE-README-Hui/gene_expression_scatter_plot/test/srs.txt) 与 [test.txt](https://github.com/lanlab-org/GeneExpressionScatterPlot-XuMengqi/blob/IMPROVE-README-Hui/gene_expression_scatter_plot/test/test.txt)。 注意: 大家协作编辑 srs.txt 与 test.txt， 而不是每个组产生自己的 srs.txt 与 test.txt。 这两个文件在 gene_expression_scatter_plot/test 目录下。 对于整个软件，我们只需要一个需求追踪矩阵。
+
+这是一个[RTM.py软件的需求追踪矩阵例子](http://lanlab.org/course/2020s/spm/test_report.html)。这是产生这个矩阵的 [srs.txt](https://github.com/spm2020spring/RequirementTraceabilityMatrix/blob/master/srs.txt) 与 [test.txt](https://github.com/spm2020spring/RequirementTraceabilityMatrix/blob/master/test.txt)。
+
 
 
 ## 需求分析文档
