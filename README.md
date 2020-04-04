@@ -11,20 +11,23 @@
 - g1.json是g1在各个样本中的表达值，JSON类型。例子:
 
 ```
-  {"Sample01": 2.5360273971241973, "Sample02": 2.4561698890956305, "Sample03": 1.8896865931855804, "Sample04": 1.8591954063715899, "Sample05": 1.9402423231503152}
+  {"Sample01": 2.53, "Sample02": 2.45, "Sample03": 1.88, "Sample04": 1.85, "Sample05": 1.94}
 ```
+
 
 - g2.json是g2在各个样本中的表达值，JSON类型。例子:
 
 ```
-  {"Sample01": 9.055254158570836, "Sample02": 7.203912689242869, "Sample03": 6.943096252000117, "Sample04": 6.349482336960998, "Sample05": 6.781733381310735}
+  {"Sample01": 9.05, "Sample02": 7.20, "Sample03": 6.94, "Sample04": 6.34, "Sample05": 6.78}
 ```
+
 
 - info.json是每个样本的信息，JSON类型。例子:
 
 ```
   {"Sample01": {"category": "Type1", "detail": "TBA"}, "Sample02": {"category": "Type1", "detail": "TBA"}, "Sample03": {"category": "Type1", "detail": "TBA"}, "Sample04": {"category": "Type1", "detail": "TBA"}, "Sample05": {"category": "Type1", "detail": "TBA"}}
 ```
+
 
 该软件会输出一个散点图，以及在各个生物条件下的基因表达水平相关性以及p值。
 
