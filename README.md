@@ -70,6 +70,10 @@
 你需要开通账户才能提交报告。 如果你需要账号，请通过电子邮件联系蓝珲 lanhui at zjnu.edu.cn。
 
 
+## Requirement Traceability Matrix
+
+每个需求至少伴有一个测试。 我们用[RMT.py](https://github.com/spm2020spring/RequirementTraceabilityMatrix)产生Requirement Traceability Matrix。
+
 
 ## 需求分析文档
 
@@ -128,8 +132,6 @@ https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 ## Project Checklist
 
 - [ ] Mission statement
-
-- [ ] Requirement Traceability Matrix
 
 - [ ] FAQ  (should be grown gradually, not suddenly)
 
