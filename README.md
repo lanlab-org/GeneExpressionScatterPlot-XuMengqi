@@ -42,9 +42,15 @@
 (tab2json，csv2json待开发)
 
 
-## 安装说明
+## 安装与使用说明
+
+### 安装
 
 本软件无需安装。下载这个项目到你的本地，点击gene_expression_scatter_plot/gene_scatter_plot_home.html即可开始使用。
+
+### 使用
+
+依次点击文件选择按钮，选择3个相应的JSON文件。最后，点击Submit按钮，生成结果。
 
 
 ## Current Status 
