@@ -124,6 +124,9 @@
 - 吴贞娴文档: https://system1.readthedocs.io/zh_CN/latest/
 
 
+我们需要将上述的需求分析文档内容合并，做出一个优于上述任何一个文档的文档。该文档的内容可能会与**Requirement Traceability Matrix**那节重提到的srs.txt的内容有所重合。 需要避免这种内容上的重合。 如果该文档中出现 srs.txt 中的内容，只需要引用 srs.txt 即可，而非重复 srs.txt 中的内容。不让同一内容出现在两个地方，这么做的目的是为了[避免文档产生不一致性](http://lanlab.org/course/2019s/se/parnas-a-rational-design-process.html#f)。
+
+
 
 ## 原始作者
 
