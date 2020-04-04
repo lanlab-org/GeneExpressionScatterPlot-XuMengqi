@@ -55,8 +55,6 @@
 - [徐梦旗、王海榕、蒋佳玲、王雪洁小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=39f14efdf98ba7b19a35993a54d68a67c655e7e7a7a09dcec19c946645db)
 
 
-
-
 ## 需求分析文档
 
 
@@ -111,6 +109,9 @@ Check the section The feature-branching workflow in the following link for more 
 https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 
 
+## Project Checklist
+
+TBA.
 
 
 ## Contributor List
