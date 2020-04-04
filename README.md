@@ -8,20 +8,23 @@
 
 输入是3个JSON文件。
 
-- g1.json是g1在各个样本中的表达值，JSON类型。例子::
+- g1.json是g1在各个样本中的表达值，JSON类型。例子:
 
+```
   {"Sample000001": 2.5360273971241973, "Sample000002": 2.4561698890956305, "Sample000003": 1.8896865931855804, "Sample000004": 1.8591954063715899, "Sample000005": 1.9402423231503152}
+```
 
+- g2.json是g2在各个样本中的表达值，JSON类型。例子:
 
-- g2.json是g2在各个样本中的表达值，JSON类型。例子::
-
+```
   {"Sample000001": 9.055254158570836, "Sample000002": 7.203912689242869, "Sample000003": 6.943096252000117, "Sample000004": 6.349482336960998, "Sample000005": 6.781733381310735}
+```
 
+- info.json是每个样本的信息，JSON类型。例子:
 
-- info.json是每个样本的信息，JSON类型。例子::
-
+```
   {"Sample000001": {"category": "Type1", "detail": "TBA"}, "Sample000002": {"category": "Type1", "detail": "TBA"}, "Sample000003": {"category": "Type1", "detail": "TBA"}, "Sample000004": {"category": "Type1", "detail": "TBA"}, "Sample000005": {"category": "Type1", "detail": "TBA"}}
-
+```
 
 该软件会输出一个散点图，以及在各个生物条件下的基因表达水平相关性以及p值。
 
