@@ -89,8 +89,7 @@
 
 ## Bug Tracker
 
-请在我们的[缺陷跟踪器](http://118.25.96.118/bugzilla/describecomponents.cgi?product=Gene%20Expression%20Scatter%20Plot)
-上报告关于软件的所有缺陷，或者提交额外功能的请求。
+请在我们的[缺陷跟踪器](http://118.25.96.118/bugzilla/describecomponents.cgi?product=Gene%20Expression%20Scatter%20Plot)上报告关于软件的所有缺陷，或者提交额外功能的请求。
 
 你需要开通账户才能提交报告。 如果你需要账号，请通过电子邮件联系蓝珲 lanhui at zjnu.edu.cn。
 
