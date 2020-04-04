@@ -59,6 +59,8 @@
 
 - [徐梦旗、王海榕、蒋佳玲、王雪洁小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=39f14efdf98ba7b19a35993a54d68a67c655e7e7a7a09dcec19c946645db)
 
+各个协作组在每个星期四进行每周总结(Weekly Review)，讨论研究下一步工作。
+
 
 ## Bug Tracker
 
