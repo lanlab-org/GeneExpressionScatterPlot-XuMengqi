@@ -165,7 +165,11 @@ https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 
 ## Discussion Forum
 
-We use IRC for asynchronous communication.  Our IRC channel is at #scatterplot@irc.freenode.org.
+We use IRC for asynchronous communication.
+
+Our IRC channel is at #scatterplot@irc.freenode.org.
+
+Check [IRC Instructions](http://lanlab.org/course/2020s/spm/irc-instruction.txt) for quick start.
 
 
 
