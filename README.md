@@ -8,13 +8,102 @@
 
 输入是3个JSON文件。
 
-- g1.json是g1在各个样本中的表达值，JSON类型。
+- g1.json是g1在各个样本中的表达值，JSON类型。例子:
 
-- g2.json是g2在各个样本中的表达值，JSON类型。
+```
+  {"Sample01": 2.53, "Sample02": 2.45, "Sample03": 1.88, "Sample04": 1.85, "Sample05": 1.94}
+```
 
-- info.json是每个样本的信息。
+
+- g2.json是g2在各个样本中的表达值，JSON类型。例子:
+
+```
+  {"Sample01": 9.05, "Sample02": 7.20, "Sample03": 6.94, "Sample04": 6.34, "Sample05": 6.78}
+```
+
+
+- info.json是每个样本的信息，JSON类型。例子:
+
+```
+  {"Sample01": {"category": "Type1", "detail": "TBA"}, "Sample02": {"category": "Type1", "detail": "TBA"}, "Sample03": {"category": "Type1", "detail": "TBA"}, "Sample04": {"category": "Type1", "detail": "TBA"}, "Sample05": {"category": "Type1", "detail": "TBA"}}
+```
+
 
 该软件会输出一个散点图，以及在各个生物条件下的基因表达水平相关性以及p值。
+
+
+
+## 将TAB-delimited格式的文件或者CSV格式的文件转化为JSON格式的输入
+
+使用tab2json或者csv2json将你的文件迅速转为Gene Expression Scatter Plot可以接收的格式。
+
+- tab2json.py gene1.tsv > gene1.json
+
+- csv2json.py gene1.csv > gene1.json
+
+
+(tab2json，csv2json待开发)
+
+
+## 安装与使用说明
+
+### 安装
+
+本软件无需安装。下载这个项目到你的本地，点击gene_expression_scatter_plot/gene_scatter_plot_home.html即可开始使用。
+
+### 使用
+
+依次点击文件选择按钮，选择3个相应的JSON文件。最后，点击Submit按钮，生成结果。
+
+
+## Current Status 
+
+目前，我们有3个协作组共12人在改进这个基因表达相关性分析工具。
+
+除了GitHub上的更新之外，各个小组还用看板来安排具体事务，每个成员每次集中精力把一个事务做好。
+
+- [吴贞娴、张珣、常思琦、王智洋小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=d7ca96ebee523c133af98df7ba11237738b380a7b31a709e0a4434f041fc)
+
+- [刘莉莉、唐叶尔、何可人、陈俊蕾小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=7fa477cafd4387e57173ab1ad68b540b087cf2aec73be6debf6c5bad371b)
+
+- [徐梦旗、王海榕、蒋佳玲、王雪洁小组](http://118.25.96.118/kanboard/?controller=BoardViewController&action=readonly&token=39f14efdf98ba7b19a35993a54d68a67c655e7e7a7a09dcec19c946645db)
+
+各个协作组在每个星期四进行每周总结(Weekly Review)，讨论研究下一步工作。
+
+
+| 日期          | 主持人        | 书记员  |
+| ------------- |:-------------:| -------:|
+| 4.9           | 吴贞娴        | 蓝珲    |
+| 4.16          | 刘莉莉        | 王智洋  |
+| 4.23          | 徐梦旗        | 张珣    |
+| 4.30          | 常思琦        | 唐叶尔  |
+| 5.7           | 王海榕        | 常思琦  |
+| 5.14          | 何可人        | 蒋佳玲  |
+| 5.21          | 王智洋        | 陈俊蕾  |
+| 5.28          | 王雪洁        | 徐梦旗  |
+
+
+主持人，准备本次要讨论的事项，不超过3项，每项讨论不超过30分钟。书记员，记录讨论的内容。
+
+
+
+## Bug Tracker
+
+请在我们的[缺陷跟踪器](http://118.25.96.118/bugzilla/describecomponents.cgi?product=Gene%20Expression%20Scatter%20Plot)上报告关于软件的所有缺陷，或者提交额外功能的请求。
+
+你需要开通账户才能提交报告。 如果你需要账号，请通过电子邮件联系蓝珲 lanhui at zjnu.edu.cn。
+
+
+## Requirement Traceability Matrix
+
+每个需求至少伴有一个测试。 我们用[RMT.py](https://github.com/spm2020spring/RequirementTraceabilityMatrix)这个Python小程序来产生Requirement Traceability Matrix。
+
+每个协作组至少要有一个成员专门负责产生这个需求追踪矩阵。
+
+该成员需要编辑 [srs.txt](https://github.com/lanlab-org/GeneExpressionScatterPlot-XuMengqi/blob/IMPROVE-README-Hui/gene_expression_scatter_plot/test/srs.txt) 与 [test.txt](https://github.com/lanlab-org/GeneExpressionScatterPlot-XuMengqi/blob/IMPROVE-README-Hui/gene_expression_scatter_plot/test/test.txt)。 注意: 大家协作编辑 srs.txt 与 test.txt， 而不是每个组产生自己的 srs.txt 与 test.txt。 这两个文件在 gene_expression_scatter_plot/test 目录下。 对于整个软件，我们只需要一个需求追踪矩阵。
+
+这是一个[RTM.py软件的需求追踪矩阵例子](http://lanlab.org/course/2020s/spm/test_report.html)。这是产生这个矩阵的 [srs.txt](https://github.com/spm2020spring/RequirementTraceabilityMatrix/blob/master/srs.txt) 与 [test.txt](https://github.com/spm2020spring/RequirementTraceabilityMatrix/blob/master/test.txt)。
+
 
 
 ## 需求分析文档
@@ -33,6 +122,9 @@
 - 袁世家文档: https://srs-writing.readthedocs.io/en/latest/
 
 - 吴贞娴文档: https://system1.readthedocs.io/zh_CN/latest/
+
+
+我们需要将上述的需求分析文档内容合并，做出一个优于上述任何一个文档的文档。该文档的内容可能会与**Requirement Traceability Matrix**那节中提到的srs.txt的内容有所重合。 需要避免这种内容上的重合。 如果该文档中出现 srs.txt 中的内容，只需要引用 srs.txt 即可，而非重复 srs.txt 中的内容。不让同一内容出现在两个地方，这么做的目的是为了[避免文档产生不一致性](http://lanlab.org/course/2019s/se/parnas-a-rational-design-process.html#f)。
 
 
 
@@ -70,6 +162,30 @@ Check the section The feature-branching workflow in the following link for more 
 
 https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 
+
+## Discussion Forum
+
+We use IRC for asynchronous communication.
+
+Our IRC channel is at #scatterplot@irc.freenode.org.
+
+Check [IRC Instructions](http://lanlab.org/course/2020s/spm/irc-instruction.txt) for quick start.
+
+
+
+## Project Checklist
+
+- [ ] Mission statement
+
+- [ ] FAQ  (should be grown gradually, not suddenly)
+
+- [ ] COPYING/LICENSE
+
+- [ ] Developer Documentation
+
+- [ ] User Documentation
+
+- [ ] Code well commented (1 comment per 3-9 SLOC)
 
 
 
