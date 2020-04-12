@@ -13,11 +13,18 @@
 <script src="js/tToP.js"></script> 
 <script src="js/tableExport.js"></script>
 <script src="js/jquery.base64.js"></script>
+<!-- 刘莉莉添加epvalue.js -->
+<script src="js/epvalue.js"></script> 
 </head>
 <body class="with-3d-shadow with-transitions">
+
+
+
+
 <div id="id_main_output_scatter" class="chartWrap" style="background-color: white">
     <svg></svg>
 </div>
+
 <div id="id_main_output_tooltips">
 	<p align="center">
         <button class="button buttonShadow" onClick="window.location.reload();">Home</button>
@@ -35,27 +42,30 @@
     <div id="id_main_input">
         <div id="id_main_input_title">
 			<br>
-            <h1>Gene Expression</h1>
-            <h2>Scatter Plot</h2>
+            <h1>Gene Expression Scatter Plot</h1>
+            <br>
         </div>
         <div id="id_main_input_upload" class="center-div">
-            <label for="id_main_input_upload_gene1" class= "file_upload">Upload gene1 file</label>
+        	
+            <label for="id_main_input_upload_gene1" class= "file_upload">Upload gene expression levels for gene 1</label>
             <input id="id_main_input_upload_gene1" class= "file_upload" type="file" />
-            <label for="id_main_input_upload_gene2" class= "file_upload">Upload gene2 file</label>
+
+            <label for="id_main_input_upload_gene2" class= "file_upload">Upload gene expression levels for gene 2</label>
             <input id="id_main_input_upload_gene2" class= "file_upload" type="file"/>
-            <label for="id_main_input_upload_information" class= "file_upload">Upload information file</label>
+            <label for="id_main_input_upload_information" class= "file_upload">Upload sample information</label>
             <input id="id_main_input_upload_information" class= "file_upload" type="file"/>
+
         </div>  
         <div id="id_main_input_preview">
-            <p align="center">Gene1 File</p>
+            <p align="center">Gene expression levels for the first gene (in JSON format)</p>
             <div class="center-blue-div">
                 <p id="id_main_input_preview_gene1"></p>
             </div>
-            <p align="center">Gene2 File</p>
+            <p align="center">Gene expression levels for the Second gene (in JSON format)</p>
             <div class="center-blue-div">
                 <p id="id_main_input_preview_gene2"></p>        
             </div>
-            <p align="center">Information File</p>
+            <p align="center">Sample information (in JSON format)</p>
             <div class="center-blue-div">
                 <p id="id_main_input_preview_information"></p>
             </div>
@@ -83,13 +93,16 @@
     <!--main_support-->
     <p align="center">
         <a href="support.html" target="_blank">
-            <button class="button buttonShadow">Support</button>
+            <button class="button buttonShadow">Help</button>
         </a>
     </p>
     <!--main_settings-->
     <p align="center">
         <button id="id_main_settings_settings" class="button buttonShadow" onclick="clickTheSettings();">Settings</button>
     </p>
+    <div class="help-tip">
+			<p>The uploaded file must be a json format.</p>
+			</div>
     <div id="id_main_settings" align="center">
         <!--basic_model-->
         <div id="id_main_settings_modelbasic">
