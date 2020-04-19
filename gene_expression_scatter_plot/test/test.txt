@@ -121,3 +121,101 @@ Status: Pass
 Signature: 王雪洁
 
 Date: 2020-04-03
+
+
+@T006a
+
+Test title: 缺少一个Gene数据的P值测试
+
+Test for: RQ06
+
+Description: None.
+
+Rationale: None.
+
+Input: test1_g1.json(empty); test1_g2.json; test1_info.json
+
+Expected output(theoretical p-value):No Data Available.
+
+Actual output: As expected.
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王海榕
+
+Date:  2020-04-17
+
+
+@T006b
+
+Test title: Gene1和Gene2文件毁坏的P值测试
+
+Test for: RQ06
+
+Description: None.
+
+Rationale: None.
+
+Input:  test2_g1.json(empty); test2_g2.json; test2_info.json
+
+Expected output: 8.711x10-2
+
+Actual output: As expected.
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王海榕
+
+Date:  2020-04-17
+
+
+@T006c
+Test title: 正常Gene1和Gene2文件P值测试
+
+Test for: RQ06
+
+Description: None.
+
+Rationale: None.
+
+Input: test3_g1.json(empty); test3_g2.json; test3_info.json
+
+Expected output(theoretical p-value): 0.0958426
+
+Actual output: 3.080x10-2
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王海榕
+
+Date:  2020-04-17
+
+
+@T006d
+Test title: 正常Gene1和Gene2文件P值测试
+
+Test for: RQ06
+
+Description: None.
+
+Rationale: None.
+
+Input: test4_g1.json(empty); test4_g2.json; test4_info.json
+
+Expected output(theoretical p-value): 1.685467e-219
+
+Actual output: 1.207×10-62
+
+Diagnosis: None.
+
+Status: Pass
+
+Signature: 王海榕
+
+Date:  2020-04-17
