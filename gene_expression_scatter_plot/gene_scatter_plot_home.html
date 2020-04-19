@@ -20,9 +20,21 @@
 <div id="id_main_output_scatter" class="chartWrap" style="background-color: white">
     <svg></svg>
 </div>
+<!--提示用户使用json格式 -->
 <div class="help-tip">
-	<p>The uploaded file must be a json format.</p>
+
+    <pre>What is json? json is a collection of key/value pairs.
+for examlpe: if you have a table for g1 and g2 like this:
+    Sample01   Sample02 
+g1    2.53       2.53
+
+g2    9.05       7.20
+then you have to made it into 2 files:
+gene1 file is {"Sample01": 2.53, "Sample02": 2.45}
+gene2 file is {"Sample01": 9.05, "Sample02": 7.20}
+    </pre>
 </div>
+
 <div id="id_main_output_tooltips">
 	<p align="center">
         <button class="button buttonShadow" onClick="window.location.reload();">Home</button>
