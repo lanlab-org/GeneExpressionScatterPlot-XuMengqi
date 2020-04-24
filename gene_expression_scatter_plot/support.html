@@ -17,10 +17,38 @@
     <h1>Guide: </h1>
     <div>
         <h3>1.How to upload the files?</h3>
-        <div class="center-blue-higher-div"> &nbsp; &nbsp;We support the .json and .txt files, you should upload them one by one; If you upload the invalid files or upload the files by a invalid order, we will find them and notice you.</div>
+        <div class="center-blue-higher-div"> &nbsp; &nbsp;
+			We support the .json and .txt files, you should upload them one by one; If you upload the invalid files or upload the files by a invalid order, we will find them and notice you.<br>
+		&nbsp; &nbsp;
+			Note: Please make the data conform to the following format.<br>
+		&nbsp; &nbsp;
+			gene1 and gene2: <br>
+			&nbsp; &nbsp;&nbsp; &nbsp;{<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sample000001":1.71018781553424,<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sample000002":3.57312022243706,<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sample000003":1.81645208181843<br>
+			&nbsp; &nbsp;&nbsp; &nbsp;}<br>
+		&nbsp; &nbsp;
+			inform:<br>
+			&nbsp; &nbsp;&nbsp; &nbsp;{<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sample000001": {"category": "Type1", "detail": "TBA"},<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sample000002": {"category": "Type6", "detail": "TBA"},<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sample000003": {"category": "Type2", "detail": "TBA"}<br>
+&nbsp; &nbsp;&nbsp; &nbsp;}
+		</div>
         <h3>2. How does it work?</h3>
-        <div class="center-blue-higher-div"> &nbsp; &nbsp;According to your gene1 file, we look for the data of gene 2 and information, and if we find them, we will output them. You can use "<b>settings</b>" to add the new search rule by inputting your sample.<br> &nbsp;<a href="src/t_table.pdf" target="_blank" style="color: red"><i>the t table</i></a><p style="color: #F1161A;" align="center">Tips: Google Chrome is our best supported browser. It also works in Firefox, Opera, Safari and Internet Explorer 10.<br></p></div>
-        <h3>3.Error code</h3>
+        <div class="center-blue-higher-div"> 
+			&nbsp; &nbsp;According to your gene1 file, we look for the data of gene 2 and information. If you want to generate scatter diagram, you need to upload at least gene1 and gene2 files.<br>
+			&nbsp;&nbsp;You can press "<b><i>settings</i></b>" button in the home page to check or add the search rule of sample.<br> 
+			&nbsp;&nbsp;You can use <a href="src/t_table.pdf" target="_blank" style="color: red">t table</a> to look up the T distribution. 
+			<p style="color: #F1161A;" align="center">Tips: Google Chrome is our best supported browser. It also works in Firefox, Opera, Safari and Internet Explorer 10.<br></p></div>
+        <h3>3. What can you do ?</h3>
+		<div class="center-blue-higher-div">
+			&nbsp;&nbsp;&nbsp;&nbsp;This software can generate gene scatter map and calculate relevant data for you. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;Scatter map enables users to display the gene samples of the desired tissues by clicking or searching for them. You can touch the point to display the details of the sample point. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;Table display below scatter shows the correlation coefficient, number and P value for each tissue.  Click the corresponding column in the header to display the data in the table in ascending or reverse order according to this column.
+		</div>
+        <h3>4. Error code</h3>
         <div class="center-blue-higher-div">
                 '100': 'your browser does not support FileReader objects'<br>
                 '101': 'lack gene1 file'<br>
@@ -30,10 +58,11 @@
                 '105': 'invalid json format in gene2 file'<br>
                 '106': 'invalid json format in information file'<br>
 				'108': 'invalid gene1, gene2, or information uploading order, please upload again by right order'<br></div>
-        <h3>4. How to contact us?</h3>
-        <div class="center-blue-higher-div"> &nbsp; &nbsp;You can send an email to <u>xumengqi&#64;zjnu.edu.cn</u> for help and we will reply to you as soon as possible.<br><i>Last modified:18 May 2019.</i></div>
-        <h3>5. Privacy Notice</h3>
+		<h3>5. How to contact us?</h3>
+        <div class="center-blue-higher-div"> &nbsp; &nbsp;You can send an email to <u>xumengqi&#64;zjnu.edu.cn</u> for help and we will reply to you as soon as possible.<p align="right" style="font-size: 12px; line-height: 0px;">Last modified:23 March 2020.</p></div>
+        <h3>6. Privacy Notice</h3>
         <div class="center-blue-higher-div"> &nbsp; &nbsp;Source files are only used for data processing of visualized scatter maps of gene expression. Programs do not store, disseminate or modify any source files.</div>
+        
     </div>
 </div>
 <p align="center"><a href="gene_scatter_plot_home.html"><button class="button buttonShadow">Home</button></a></p>
