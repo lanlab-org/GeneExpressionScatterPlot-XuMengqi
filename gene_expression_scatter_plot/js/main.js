@@ -724,7 +724,13 @@ function errorCode(temp) {
                 '107': 'sample already exists, no need to add it again',
                 '108': 'wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.'
                }
-    alert("Error " + temp + ": " + code[temp]);
+    //alert("Error " + temp + ": " + code[temp]);
+	//修改提示框的样式
+	$.gDialog.alert( code[temp], {
+	        title: "Error",
+	        animateIn: "bounceIn",
+	        animateOut: "bounceOut"
+	      });
 }
 function isJson(str) {
     if (typeof str == 'string') {
