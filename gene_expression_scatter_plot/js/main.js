@@ -147,29 +147,59 @@ function convertStringToJson(strGene1, strGene2, strInformation) {
             }
         }
         else {
-            if (!isJsonGene1) {
-                errorCode(104);
+    
+            if (!isJsonGene1&&!isJsonGene2&&!isJsonInformation) {
+                errorCode(116);
             }
-            if (!isJsonGene2) {
-                errorCode(105);
+            else if (!isJsonGene2&&!isJsonInformation) {
+                errorCode(115);
             }
-            if (!isJsonInformation) {
+            else if (!isJsonGene1&&!isJsonInformation) {
+                errorCode(114);
+            }
+            else if (!isJsonGene1&&!isJsonGene2) {
+                errorCode(113);
+            }
+            else if (!isJsonInformation) {
                 errorCode(106);
             }
+            else if (!isJsonGene2) {
+                errorCode(105);
+            }
+            else if (!isJsonGene1) {
+                errorCode(104);
+            }
+            
         }
     }
     else {
-        if (strGene1 == "") {
+        
+        if (strGene1 == ""&&strGene2 == ""&&strInformation == "") {
+            errorCode(112);
+        }
+        else if (strGene2 == ""&&strInformation == "") {
+            errorCode(111);
+        }
+        else if (strGene1 == ""&&strGene2 == "") {
+            errorCode(109);
+        }
+        else if (strGene1 == ""&&strInformation == "") {
+            errorCode(110);
+        }
+        else if (strGene1 == "") {
             errorCode(101);
         }
-        if (strGene2 == "") {
+        else if (strGene2 == "") {
             errorCode(102);
         }
-        if (strInformation == "") {
+        else if (strInformation == "") {
             errorCode(103);
         }
+        
     }
-}
+       
+        
+    }
 //使用json文件内容计算并赋值给tissues, datas, details,gene1,gene2等全局变量
 function makeJsonIntoArray(jsonGene1, jsonGene2, jsonInformation, isJsonInformation) {
     var numberOfExecuted = 0;
@@ -714,23 +744,33 @@ function getDetatils() {
 
 function errorCode(temp) {
     var code = {
-                '100': 'your browser does not support FileReader objects',
-                '101': 'lack gene1 file',
-                '102': 'lack gene2 file',
-                '103': 'lack information file',
-                '104': 'invalid json format in gene1 file',
-                '105': 'invalid json format in gene2 file',
-                '106': 'invalid json format in information file',
-                '107': 'sample already exists, no need to add it again',
-                '108': 'wrong format for the expression levels of gene1 or gene2. Please refer to input file format for a sample format.'
+                '100': 'Your browser does not support FileReader objects （Error code 100）',
+                '101': 'Missing gene 1 file （Error code 101）',
+                '102': 'Missing gene 2 file （Error code 102）',
+                '103': 'Missing information file （Error code 103）',
+                '104': 'Invalid json format in gene1 file （Error code 104）',
+                '105': 'Invalid json format in gene2 file （Error code 105）',
+                '106': 'Invalid json format in information file （Error code 106）',
+                '107': 'Sample already exists, no need to add it again （Error code 107）',
+                '108': 'Invalid gene1, gene2, or information uploading order, please upload again by right order （Error code 108）',
+                '109': 'Missing gene 1 and gene 2 files （Error code 109）',
+                '110': 'Missing gene 1 and information files （Error code 110）',
+                '111': 'Missing gene 2 and information files （Error code 111）',
+                '112': 'Missing all files （Error code 112）',
+                '113': 'Invalid json format in gene1 and gene2 files （Error code 113）',
+                '114': 'Invalid json format in gene1 and information files （Error code 114）',
+                '115': 'Invalid json format in gene2 and information files （Error code 115）',
+                '116': 'Invalid json format in all files （Error code 116）'
+
                }
     //alert("Error " + temp + ": " + code[temp]);
 	//修改提示框的样式
-	$.gDialog.alert( code[temp], {
-	        title: "Error",
-	        animateIn: "bounceIn",
-	        animateOut: "bounceOut"
-	      });
+    $.gDialog.alert( code[temp], {
+		title: "Error",
+		animateIn: "bounceIn",
+		animateOut: "bounceOut"
+	});
+
 }
 function isJson(str) {
     if (typeof str == 'string') {
