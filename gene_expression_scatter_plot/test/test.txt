@@ -1,0 +1,47 @@
+@T001
+
+Test title: test case for requirement 9
+
+Test for: RQ09
+
+Description: Empirical P value 是为实际观测数据而不是理论数据计算的P值.这里测试软件所计算的值是否正确 
+
+Rationale:In statistics, significance testing is carried out by taking up two hypotheses to explain the statistical model for the process. First is null hypothesis which gives the simplest model. Another is alternative hypothesis, which is true if null hypothesis is proved wrong. These two hypotheses are tested against each other in terms of P- value.
+
+Input:g1.json	g2.json	info.json
+Expected output: 表格中显示正确、较精确的Empirical P value
+
+Actual output:Empirical P value能正常显示在表格中，并较精确。
+
+
+Diagnosis:
+
+Status: 
+
+Signature: He Keren
+
+Date: 
+
+
+@T002
+
+Test title: test case for requirement 10
+
+Test for: RQ10
+
+Description: support页面显示详细的软件概述， 包括如何操作该软件，输入输出的格式，使用的技术等等。
+
+Input:无
+
+Expected output: support页面能显示正确的概述
+
+Actual output: support页面能显示正确的概述
+
+
+Diagnosis:
+
+Status: 
+
+Signature: He Keren
+
+Date: 
